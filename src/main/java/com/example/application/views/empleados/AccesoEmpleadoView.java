@@ -29,13 +29,15 @@ public class AccesoEmpleadoView extends VerticalLayout {
             Empleado empleado = Patio.getInstance().validarCredencialesEmpleado(nombre, idInstitucional);
 
             if (empleado != null) {
-                Notification.show("Bienvenido, " + nombre ).setPosition(Notification.Position.MIDDLE);
+                Notification.show("Bienvenido, " + nombre );
                 UI.getCurrent().navigate("menu-empleados");
             } else {
-                Notification.show("Credenciales incorrectas").setPosition(Notification.Position.MIDDLE);
+                Notification.show("Credenciales incorrectas");
             }
         });
 
-        add(new FormLayout(nombreField, idInstitucionalField, loginBtn));
+        FormLayout formLayout = new FormLayout(nombreField, idInstitucionalField, loginBtn);
+        add(formLayout, loginBtn);
+        setAlignItems(Alignment.CENTER);
     }
 }

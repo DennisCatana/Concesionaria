@@ -13,5 +13,13 @@ public class GestorClientes {
         return listaClientes;
     }
 
-    // Puedes agregar más métodos según sea necesario para gestionar la lista de clientes
+    // Corregir el nombre de la lista en el siguiente método
+    public static Cliente buscarClientePorCedula(int cedula) {
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getCedula() == cedula) {
+                return cliente;
+            }
+        }
+        return null;
+    }
 }

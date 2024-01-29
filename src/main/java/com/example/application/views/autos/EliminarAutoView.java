@@ -27,6 +27,9 @@ public class EliminarAutoView extends VerticalLayout {
         Button eliminarBtn = new Button("Eliminar", e -> confirmarEliminacion(matriculaField.getValue()));
 
         add(new FormLayout(matriculaField, eliminarBtn));
+        FormLayout formLayout = new FormLayout(matriculaField, eliminarBtn);
+        add(formLayout,matriculaField, eliminarBtn);
+        setAlignItems(Alignment.CENTER);
     }
 
     private void confirmarEliminacion(String matricula) {
