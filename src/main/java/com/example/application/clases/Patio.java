@@ -111,4 +111,13 @@ public class Patio {
     public void agregarEmpleado(Empleado empleado) {
         empleados.add(empleado);
     }
+
+    public Empleado validarCredencialesEmpleado(String nombre, int IDInstitucional) {
+        for (Empleado empleado : empleados) {
+            if (empleado.getNombre().equals(nombre) && empleado.getIDInstitucional() == IDInstitucional) {
+                return empleado; // Devuelve el empleado si las credenciales son válidas
+            }
+        }
+        return null; // Devuelve null si las credenciales no son válidas
+    }
 }

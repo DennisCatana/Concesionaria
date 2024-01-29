@@ -1,10 +1,11 @@
 package com.example.application.clases;
 
-class Empleado {
+public class Empleado {
     String nombre;
     int cedula;
     int edad;
     String correo;
+    private int IDInstitucional;
 
     public Empleado(String nombre, int cedula, int edad, String correo) {
         this.nombre = nombre;
@@ -43,5 +44,13 @@ class Empleado {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public int getIDInstitucional() {
+        return IDInstitucional;
+    }
+
+    public void setIDInstitucional(int idInstitucional) {
+        this.IDInstitucional = idInstitucional;
     }
 }

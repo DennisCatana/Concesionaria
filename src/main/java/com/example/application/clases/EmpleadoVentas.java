@@ -43,7 +43,7 @@ public class EmpleadoVentas extends Empleado {
         int opcionEmpleadoVentas;
         do {
             System.out.println("Menú com.example.application.clases.Empleado Ventas");
-            System.out.println("1. Vender com.example.application.clases.Auto");
+            System.out.println("1. Vender Auto");
             System.out.println("2. Observar Autos Vendidos");
             System.out.println("3. Volver al menú principal");
             System.out.print("Ingrese su opción: ");
