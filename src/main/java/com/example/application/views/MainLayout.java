@@ -1,10 +1,14 @@
 package com.example.application.views;
 
+import com.example.application.views.accesoEmpleado.AccesoEmpleadoView;
+import com.example.application.views.autosComprados.AutosCompradosView;
+import com.example.application.views.cliente.RegistrarClienteView;
 import com.example.application.views.inicio.InicioView;
 import com.example.application.views.agregar.AgregarAutoView;
 import com.example.application.views.eliminar.EliminarAutoView;
 import com.example.application.views.helloworld.HelloWorldView;
 import com.example.application.views.mostrar.MostrarAutoView;
+import com.example.application.views.registrarEmpleado.RegistrarEmpleadoView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -59,6 +63,11 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Registrar Empleado de Ventas", RegistrarEmpleadoView.class));
+        nav.addItem(new SideNavItem("Acceso Empleados", AccesoEmpleadoView.class));
+        nav.addItem(new SideNavItem("Registrar Cliente", RegistrarClienteView.class));
+        nav.addItem(new SideNavItem("Mostrar Autos Comprados", AutosCompradosView.class));
+
         return nav;
     }
 
