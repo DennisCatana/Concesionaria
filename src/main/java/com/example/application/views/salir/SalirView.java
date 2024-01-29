@@ -1,4 +1,4 @@
-package com.example.application.views.inicio;
+package com.example.application.views.salir;
 
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
@@ -11,12 +11,11 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 
-@PageTitle("Inicio")
-@RouteAlias(value = "")
-@Route(value = "inicio")
-public class InicioView extends VerticalLayout {
+@PageTitle("Salir")
+@Route(value = "salir", layout = MainLayout.class)
+public class SalirView extends VerticalLayout {
 
-    public InicioView() {
+    public SalirView() {
         setSpacing(false);
 
         Image img = new Image("images/Consesionaria.png", "placeholder plant");
@@ -26,10 +25,10 @@ public class InicioView extends VerticalLayout {
         H2 header = new H2("Concensionaria");
         header.addClassNames(Margin.Top.XLARGE, Margin.Bottom.MEDIUM);
         add(header);
-        add(new Paragraph("Conduce tus sueños, vive la experiencia 🤗"));
+        add(new Paragraph("Espero que nuestro servicio haya sido de su agrado 🤗"));
 
-        Button goToOtraRutaButton = new Button("Ingresar");
-        goToOtraRutaButton.addClickListener(e -> getUI().ifPresent(ui -> ui.navigate("hello")));
+        Button goToOtraRutaButton = new Button("Salir");
+        goToOtraRutaButton.addClickListener(e -> getUI().ifPresent(ui -> ui.navigate("inicio")));
         add(goToOtraRutaButton);
 
         setSizeFull();
