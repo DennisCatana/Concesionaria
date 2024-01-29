@@ -66,7 +66,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Acceso Empleados", AccesoEmpleadoView.class, LineAwesomeIcon.KEY_SOLID.create()));
         nav.addItem(new SideNavItem("Registrar Cliente", RegistrarClienteView.class, LineAwesomeIcon.USER_PLUS_SOLID.create()));
         nav.addItem(new SideNavItem("Mostrar Autos Comprados", AutosCompradosView.class, LineAwesomeIcon.SHOPPING_CART_SOLID.create()));
-        nav.addItem(new SideNavItem("Salir", SalirView.class));
+        nav.addItem(new SideNavItem("Salir", SalirView.class, LineAwesomeIcon.SIGN_OUT_ALT_SOLID.create()));
 
 
         return nav;
