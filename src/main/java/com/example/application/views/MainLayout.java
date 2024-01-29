@@ -59,7 +59,7 @@ public class MainLayout extends AppLayout {
         SideNav nav = new SideNav();
 
         nav.addItem(new SideNavItem("Mision", MisionView.class, LineAwesomeIcon.HOME_SOLID.create()));
-        nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.CAR_SOLID.create()));
+        nav.addItem(new SideNavItem("Mostrar Autos Disponibles", MostrarAutoView.class, LineAwesomeIcon.CAR_SOLID.create()));
         nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.PLUS_SOLID.create()));
         nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.TRASH_SOLID.create()));
         nav.addItem(new SideNavItem("Registrar Empleado de Ventas", RegistrarEmpleadoView.class, LineAwesomeIcon.USER_SOLID.create()));

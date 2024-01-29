@@ -1,5 +1,6 @@
 package com.example.application.views.agregar;
 
+import com.example.application.clases.*;
 import com.example.application.views.MainLayout;
 import com.example.application.views.mostrar.Auto;
 import com.vaadin.flow.component.html.H2;
@@ -27,7 +28,7 @@ public class AgregarAutoView extends VerticalLayout {
             Patio.getInstance().agregarAuto(new Auto(matriculaField.getValue(), modeloField.getValue(), marcaField.getValue(), Double.parseDouble(precioField.getValue())));
         });
 
+
         add(new FormLayout(matriculaField, modeloField, marcaField, precioField, agregarBtn));
     }
-
 }
