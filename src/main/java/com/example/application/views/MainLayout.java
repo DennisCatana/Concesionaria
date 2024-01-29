@@ -1,14 +1,14 @@
 package com.example.application.views;
 
+import com.example.application.views.Mision.MisionView;
 import com.example.application.views.accesoEmpleado.AccesoEmpleadoView;
 import com.example.application.views.autosComprados.AutosCompradosView;
 import com.example.application.views.cliente.RegistrarClienteView;
-import com.example.application.views.inicio.InicioView;
 import com.example.application.views.agregar.AgregarAutoView;
 import com.example.application.views.eliminar.EliminarAutoView;
-import com.example.application.views.helloworld.HelloWorldView;
 import com.example.application.views.mostrar.MostrarAutoView;
 import com.example.application.views.registrarEmpleado.RegistrarEmpleadoView;
+import com.example.application.views.salir.SalirView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -58,8 +58,7 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        nav.addItem(new SideNavItem("Hello World", HelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("About", InicioView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Mision", MisionView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
         nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.FILE.create()));
@@ -67,6 +66,8 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Acceso Empleados", AccesoEmpleadoView.class));
         nav.addItem(new SideNavItem("Registrar Cliente", RegistrarClienteView.class));
         nav.addItem(new SideNavItem("Mostrar Autos Comprados", AutosCompradosView.class));
+        nav.addItem(new SideNavItem("Salir", SalirView.class));
+
 
         return nav;
     }
