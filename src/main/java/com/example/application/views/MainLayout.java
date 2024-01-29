@@ -58,14 +58,14 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        nav.addItem(new SideNavItem("Mision", MisionView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.FILE.create()));
-        nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.FILE.create()));
-        nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.FILE.create()));
-        nav.addItem(new SideNavItem("Registrar Empleado de Ventas", RegistrarEmpleadoView.class));
-        nav.addItem(new SideNavItem("Acceso Empleados", AccesoEmpleadoView.class));
-        nav.addItem(new SideNavItem("Registrar Cliente", RegistrarClienteView.class));
-        nav.addItem(new SideNavItem("Mostrar Autos Comprados", AutosCompradosView.class));
+        nav.addItem(new SideNavItem("Mision", MisionView.class, LineAwesomeIcon.HOME_SOLID.create()));
+        nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.CAR_SOLID.create()));
+        nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.PLUS_SOLID.create()));
+        nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.TRASH_SOLID.create()));
+        nav.addItem(new SideNavItem("Registrar Empleado de Ventas", RegistrarEmpleadoView.class, LineAwesomeIcon.USER_SOLID.create()));
+        nav.addItem(new SideNavItem("Acceso Empleados", AccesoEmpleadoView.class, LineAwesomeIcon.KEY_SOLID.create()));
+        nav.addItem(new SideNavItem("Registrar Cliente", RegistrarClienteView.class, LineAwesomeIcon.USER_PLUS_SOLID.create()));
+        nav.addItem(new SideNavItem("Mostrar Autos Comprados", AutosCompradosView.class, LineAwesomeIcon.SHOPPING_CART_SOLID.create()));
         nav.addItem(new SideNavItem("Salir", SalirView.class));
 
 
