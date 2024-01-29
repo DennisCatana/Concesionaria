@@ -7,10 +7,12 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 
-@PageTitle("About")
-@Route(value = "about", layout = MainLayout.class)
+@PageTitle("Inicio")
+@RouteAlias(value = "", layout = MainLayout.class)
+@Route(value = "inicio", layout = MainLayout.class)
 public class InicioView extends VerticalLayout {
 
     public InicioView() {
@@ -20,10 +22,10 @@ public class InicioView extends VerticalLayout {
         img.setWidth("200px");
         add(img);
 
-        H2 header = new H2("This place intentionally left empty");
+        H2 header = new H2("Concensionaria");
         header.addClassNames(Margin.Top.XLARGE, Margin.Bottom.MEDIUM);
         add(header);
-        add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
+        add(new Paragraph("Conduce tus sueños, vive la experiencia 🤗"));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
