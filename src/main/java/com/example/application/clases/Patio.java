@@ -20,11 +20,11 @@ public class Patio {
         autosDisponibles.add(auto);
     }
 
-    public void eliminarAuto(String matricula) {
+    public boolean eliminarAuto(String matricula) {
         Auto autoEliminar = null;
 
         for (Auto auto : autosDisponibles) {
-            if (auto.matricula.equals(matricula)) {
+            if (auto.getMatricula().equals(matricula)) {
                 autoEliminar = auto;
                 break;
             }
@@ -32,9 +32,11 @@ public class Patio {
 
         if (autoEliminar != null) {
             autosDisponibles.remove(autoEliminar);
-            System.out.println("com.example.application.clases.Auto con matrícula " + matricula + " eliminado con éxito.");
+            System.out.println("Auto con matrícula " + matricula + " eliminado con éxito.");
+            return true; // Devuelve true si el auto se eliminó correctamente
         } else {
             System.out.println("No se encontró ningún auto con esa matrícula.");
+            return false; // Devuelve false si la matrícula no se encontró
         }
     }
 

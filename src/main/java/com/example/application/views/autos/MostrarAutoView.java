@@ -12,12 +12,18 @@ import com.vaadin.flow.component.grid.Grid;
 @Route(value = "mostrar-autos", layout = MainLayout.class)
 
 public class MostrarAutoView extends VerticalLayout {
-    public MostrarAutoView(){
 
+    public MostrarAutoView() {
         H2 header = new H2("Mostrar Autos");
-        Grid<Auto> grid = new Grid<>(Auto.class);
+
+        Grid<Auto> grid = new Grid<>();
         grid.setItems(Patio.getInstance().obtenerAutosDisponibles());
 
+        // Configuración del grid
+        grid.addColumn(Auto::getMatricula).setHeader("Matrícula");
+        grid.addColumn(Auto::getModelo).setHeader("Modelo");
+        grid.addColumn(Auto::getMarca).setHeader("Marca");
+        grid.addColumn(Auto::getPrecio).setHeader("Precio");
         add(grid);
     }
 }
