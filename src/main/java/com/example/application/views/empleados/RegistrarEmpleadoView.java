@@ -1,4 +1,4 @@
-package com.example.application.views.registrarEmpleado;
+package com.example.application.views.empleados;
 
 import com.example.application.clases.*;
 import com.example.application.views.MainLayout;
@@ -36,11 +36,9 @@ public class RegistrarEmpleadoView extends VerticalLayout {
                     Integer.parseInt(idInstitucionalField.getValue()),
                     Double.parseDouble(sueldoField.getValue())
             );
-            // Agregar el nuevo empleado a la lista de empleados
-            Empleados.getInstance().agregarEmpleado(nuevoEmpleado);
+
         });
 
         add(new FormLayout(nombreField, cedulaField, edadField, correoField, idInstitucionalField, sueldoField, registrarBtn));
-    }
     }
 }

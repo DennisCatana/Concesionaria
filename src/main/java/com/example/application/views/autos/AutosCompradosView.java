@@ -1,4 +1,4 @@
-package com.example.application.views.autosComprados;
+package com.example.application.views.autos;
 
 import com.example.application.clases.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;

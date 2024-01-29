@@ -1,4 +1,4 @@
-package com.example.application.views.accesoEmpleado;
+package com.example.application.views.empleados;
 
 import com.example.application.clases.*;
 import com.example.application.views.MainLayout;

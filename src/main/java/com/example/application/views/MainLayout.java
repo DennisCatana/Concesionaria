@@ -1,13 +1,13 @@
 package com.example.application.views;
 
-import com.example.application.views.Mision.MisionView;
-import com.example.application.views.accesoEmpleado.AccesoEmpleadoView;
-import com.example.application.views.autosComprados.AutosCompradosView;
+import com.example.application.views.inicio.MisionView;
+import com.example.application.views.empleados.AccesoEmpleadoView;
+import com.example.application.views.autos.AutosCompradosView;
 import com.example.application.views.cliente.RegistrarClienteView;
-import com.example.application.views.agregar.AgregarAutoView;
-import com.example.application.views.eliminar.EliminarAutoView;
-import com.example.application.views.mostrar.MostrarAutoView;
-import com.example.application.views.registrarEmpleado.RegistrarEmpleadoView;
+import com.example.application.views.autos.AgregarAutoView;
+import com.example.application.views.autos.EliminarAutoView;
+import com.example.application.views.autos.MostrarAutoView;
+import com.example.application.views.empleados.RegistrarEmpleadoView;
 import com.example.application.views.salir.SalirView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;

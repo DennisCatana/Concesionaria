@@ -3,7 +3,7 @@ package com.example.application.clases;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class EmpleadoVentas extends Empleado {
+public class EmpleadoVentas extends Empleado {
     private int IDInstitucional;
     private double sueldo;
     private ArrayList<Auto> autosVendidos = new ArrayList<>();
