@@ -26,16 +26,20 @@ public class AgregarAutoView extends VerticalLayout {
         Button agregarBtn = new Button("Agregar", e -> {
             Patio patio = Patio.getInstance();
             if (patio != null) {
-                Auto nuevoAuto = new Auto(matriculaField.getValue(), modeloField.getValue(), marcaField.getValue(), Double.parseDouble(precioField.getValue()));
+                Auto nuevoAuto = new Auto(matriculaField.getValue(),
+                        modeloField.getValue(),
+                        marcaField.getValue(),
+                        Double.parseDouble(precioField.getValue()));
                 patio.agregarAuto(nuevoAuto);
                 // Mostrar notificación de éxito
-                Notification.show("El auto ha sido guardado exitosamente").setPosition(Notification.Position.MIDDLE);
+                Notification.show("El auto ha sido guardado exitosamente");
             } else {
-                // Manejo de error o mensaje de advertencia
-                System.out.println("Llena los campos correctamente.");
+                // Manejo de error o mensaje de
+                Notification.show("Llena los campos correctamente.");
             }
         });
-
-        add(new FormLayout(matriculaField, modeloField, marcaField, precioField, agregarBtn));
+        FormLayout formLayout = new FormLayout(matriculaField, modeloField, marcaField, precioField, agregarBtn);
+        add(formLayout, agregarBtn);
+        setAlignItems(Alignment.CENTER);
     }
 }

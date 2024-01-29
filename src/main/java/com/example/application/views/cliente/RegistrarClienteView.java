@@ -41,7 +41,7 @@ public class RegistrarClienteView extends VerticalLayout {
         });
 
         FormLayout formLayout = new FormLayout(nombreField, cedulaField, edadField, correoField, presupuestoField);
-        add(header, formLayout, registrarBtn);
+        add(formLayout, registrarBtn);
 
         // Centrar el formulario y el botón verticalmente
         setAlignItems(Alignment.CENTER);

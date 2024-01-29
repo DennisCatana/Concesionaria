@@ -42,9 +42,9 @@ public class EliminarAutoView extends VerticalLayout {
 
     private void eliminarAuto(String matricula) {
         if (Patio.getInstance().eliminarAuto(matricula)) {
-            Notification.show("Auto eliminado exitosamente").setPosition(Notification.Position.MIDDLE);
+            Notification.show("Auto eliminado exitosamente");
         } else {
-            Notification.show("Matrícula no encontrada").setPosition(Notification.Position.MIDDLE);
+            Notification.show("Matrícula no encontrada");
         }
     }
 }
