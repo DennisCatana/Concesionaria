@@ -2,7 +2,7 @@ package com.example.application.clases;
 
 import java.util.ArrayList;
 
-class Cliente extends Persona {
+public class Cliente extends Persona {
     private double presupuesto;
     private ArrayList<Auto> autosComprados = new ArrayList<>();
 

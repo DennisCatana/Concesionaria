@@ -43,7 +43,8 @@ public class RegistrarEmpleadoView extends VerticalLayout {
             // Muestra notificación de éxito
             Notification.show("Empleado registrado con éxito").setPosition(Notification.Position.MIDDLE);
         });
-
-        add(new FormLayout(nombreField, cedulaField, edadField, correoField, idInstitucionalField, sueldoField, registrarBtn));
+        FormLayout formLayout = new FormLayout(nombreField, cedulaField, edadField, correoField, idInstitucionalField, sueldoField, registrarBtn);
+        add(formLayout, registrarBtn);
+        setAlignItems(Alignment.CENTER);
     }
 }

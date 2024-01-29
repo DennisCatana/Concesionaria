@@ -53,7 +53,7 @@ public class Patio {
         }
     }
 
-    public void agregarAuto() {
+    /*public void agregarAuto() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese la matrícula del auto: ");
@@ -102,7 +102,7 @@ public class Patio {
 
         Cliente nuevoCliente = new Cliente(nombre, cedula, edad, correo, presupuesto);
         clientes.add(nuevoCliente);
-    }
+    }*/
 
     public ArrayList<Cliente> obtenerClientes() {
         return clientes;
