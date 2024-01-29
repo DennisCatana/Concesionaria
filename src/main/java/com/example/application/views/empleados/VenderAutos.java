@@ -21,7 +21,6 @@ public class VenderAutos extends VerticalLayout {
         this.empleadoVentas = empleadoVentas;
         initView();
     }
-
     private void initView() {
         // Lógica para la vista de la página de venta de autos
         // ...
