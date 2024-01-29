@@ -136,4 +136,5 @@ public class EmpleadoVentas extends Empleado {
     public int getIDInstitucional() {
         return IDInstitucional;
     }
+
 }

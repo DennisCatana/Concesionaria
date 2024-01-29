@@ -32,7 +32,7 @@ public class AgregarAutoView extends VerticalLayout {
                 Notification.show("El auto ha sido guardado exitosamente").setPosition(Notification.Position.MIDDLE);
             } else {
                 // Manejo de error o mensaje de advertencia
-                System.out.println("La instancia de Patio no ha sido inicializada correctamente.");
+                System.out.println("Llena los campos correctamente.");
             }
         });
 
