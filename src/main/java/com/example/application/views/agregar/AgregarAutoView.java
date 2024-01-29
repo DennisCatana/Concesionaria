@@ -2,7 +2,6 @@ package com.example.application.views.agregar;
 
 import com.example.application.clases.*;
 import com.example.application.views.MainLayout;
-import com.example.application.views.mostrar.Auto;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;

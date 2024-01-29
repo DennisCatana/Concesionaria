@@ -1,5 +1,6 @@
 package com.example.application.views.eliminar;
 
+import com.example.application.clases.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.html.H2;

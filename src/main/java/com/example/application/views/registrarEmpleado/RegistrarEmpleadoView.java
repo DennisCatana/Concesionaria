@@ -1,5 +1,6 @@
 package com.example.application.views.registrarEmpleado;
 
+import com.example.application.clases.*;
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
