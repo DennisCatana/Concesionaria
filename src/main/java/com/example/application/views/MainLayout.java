@@ -1,6 +1,6 @@
 package com.example.application.views;
 
-import com.example.application.views.about.AboutView;
+import com.example.application.views.inicio.InicioView;
 import com.example.application.views.agregar.AgregarAutoView;
 import com.example.application.views.eliminar.EliminarAutoView;
 import com.example.application.views.helloworld.HelloWorldView;
@@ -55,7 +55,7 @@ public class MainLayout extends AppLayout {
         SideNav nav = new SideNav();
 
         nav.addItem(new SideNavItem("Hello World", HelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("About", InicioView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Mostrar Autos", MostrarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Agregar Autos", AgregarAutoView.class, LineAwesomeIcon.FILE.create()));
         nav.addItem(new SideNavItem("Eliminar Auto", EliminarAutoView.class, LineAwesomeIcon.FILE.create()));
