@@ -7,6 +7,8 @@ public class Patio {
     private static Patio instance;
     private ArrayList<Auto> autosDisponibles = new ArrayList<>();
     private ArrayList<Cliente> clientes = new ArrayList<>();
+    private ArrayList<Empleado> empleados = new ArrayList<>(); // Agrega esta lista de empleados
+
 
     public static Patio getInstance() {
         return instance;
@@ -104,5 +106,9 @@ public class Patio {
 
     public ArrayList<Cliente> obtenerClientes() {
         return clientes;
+    }
+
+    public void agregarEmpleado(Empleado empleado) {
+        empleados.add(empleado);
     }
 }
