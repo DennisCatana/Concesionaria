@@ -23,4 +23,6 @@ public class Cliente extends Persona {
     public ArrayList<Auto> obtenerAutosComprados() {
         return autosComprados;
     }
+
+
 }

@@ -1,7 +1,6 @@
 package com.example.application.clases;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Patio {
     private static Patio instance;
@@ -120,4 +119,6 @@ public class Patio {
         }
         return null; // Devuelve null si las credenciales no son válidas
     }
+
+
 }

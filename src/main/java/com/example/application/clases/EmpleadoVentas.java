@@ -14,31 +14,10 @@ public class EmpleadoVentas extends Empleado {
         this.sueldo = sueldo;
     }
 
-    public static EmpleadoVentas registrarEmpleadoVentas(Scanner scanner) {
-        System.out.println("Registro de com.example.application.clases.Empleado de Ventas");
-        System.out.print("Ingrese el nombre del empleado: ");
-        String nombre = scanner.nextLine();
-        System.out.print("Ingrese la cédula del empleado: ");
-        int cedula = scanner.nextInt();
-        scanner.nextLine();  // Consumir el salto de línea
-        System.out.print("Ingrese la edad del empleado: ");
-        int edad = scanner.nextInt();
-        scanner.nextLine();  // Consumir el salto de línea
-        System.out.print("Ingrese el correo del empleado: ");
-        String correo = scanner.nextLine();
-        System.out.print("Ingrese el ID institucional del empleado: ");
-        int idInstitucional = scanner.nextInt();
-        scanner.nextLine();  // Consumir el salto de línea
-        System.out.print("Ingrese el sueldo del empleado: ");
-        double sueldo = scanner.nextDouble();
-
-        return new EmpleadoVentas(nombre, cedula, edad, correo, idInstitucional, sueldo);
-    }
-
     public void menuEmpleadoVentas(Patio concesionario) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Bienvenido, " + nombre + "! (ID Institucional: " + IDInstitucional + ")");
+        System.out.println("Bienvenido, " + getNombre() + "! (ID Institucional: " + IDInstitucional + ")");
 
         int opcionEmpleadoVentas;
         do {
@@ -83,11 +62,13 @@ public class EmpleadoVentas extends Empleado {
             Cliente cliente = buscarClientePorCedula(cedulaCliente, concesionario.obtenerClientes());
 
             if (cliente != null) {
-                if (cliente.getPresupuesto() >= autoVendido.precio) {
+                if (cliente.getPresupuesto() >= autoVendido.getPrecio()) {
                     autosVendidos.add(autoVendido);
                     concesionario.eliminarAuto(matriculaVendido);
                     cliente.agregarAutoComprado(autoVendido);
-                    System.out.println("Venta realizada con éxito. com.example.application.clases.Auto vendido: " + autoVendido.marca + " " + autoVendido.modelo + " - Matrícula: " + autoVendido.matricula + " - Precio: $" + autoVendido.precio);
+                    System.out.println("Venta realizada con éxito. com.example.application.clases.Auto vendido: " +
+                            autoVendido.getMarca() + " " + autoVendido.getModelo() + " - Matrícula: " +
+                            autoVendido.getMatricula() + " - Precio: $" + autoVendido.getPrecio());
                 } else {
                     System.out.println("El cliente no tiene presupuesto suficiente para comprar este auto.");
                 }
@@ -107,8 +88,9 @@ public class EmpleadoVentas extends Empleado {
             double montoTotal = 0.0;
 
             for (Auto auto : autosVendidos) {
-                System.out.println(auto.marca + " " + auto.modelo + " - Matrícula: " + auto.matricula + " - Precio: $" + auto.precio);
-                montoTotal += auto.precio;
+                System.out.println(auto.getMarca() + " " + auto.getModelo() + " - Matrícula: " +
+                        auto.getMatricula() + " - Precio: $" + auto.getPrecio());
+                montoTotal += auto.getPrecio();
             }
 
             System.out.println("Monto total vendido: $" + montoTotal);
@@ -117,7 +99,7 @@ public class EmpleadoVentas extends Empleado {
 
     private Cliente buscarClientePorCedula(int cedula, ArrayList<Cliente> clientes) {
         for (Cliente cliente : clientes) {
-            if (cliente.cedula == cedula) {
+            if (cliente.getCedula() == cedula) {
                 return cliente;
             }
         }
@@ -126,15 +108,10 @@ public class EmpleadoVentas extends Empleado {
 
     private Auto buscarAuto(String matricula, Patio concesionario) {
         for (Auto auto : concesionario.obtenerAutosDisponibles()) {
-            if (auto.matricula.equals(matricula)) {
+            if (auto.getMatricula().equals(matricula)) {
                 return auto;
             }
         }
         return null;
     }
-
-    public int getIDInstitucional() {
-        return IDInstitucional;
-    }
-
 }
