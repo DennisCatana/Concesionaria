@@ -1,6 +1,5 @@
 package com.example.application.views.inicio;
 
-import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -23,13 +22,13 @@ public class InicioView extends VerticalLayout {
         img.setWidth("200px");
         add(img);
 
-        H2 header = new H2("Concensionaria");
+        H2 header = new H2("Concensionaria PEPIN");
         header.addClassNames(Margin.Top.XLARGE, Margin.Bottom.MEDIUM);
         add(header);
         add(new Paragraph("Conduce tus sueños, vive la experiencia 🤗"));
 
         Button goToOtraRutaButton = new Button("Ingresar");
-        goToOtraRutaButton.addClickListener(e -> getUI().ifPresent(ui -> ui.navigate("hello")));
+        goToOtraRutaButton.addClickListener(e -> getUI().ifPresent(ui -> ui.navigate("mision")));
         add(goToOtraRutaButton);
 
         setSizeFull();
