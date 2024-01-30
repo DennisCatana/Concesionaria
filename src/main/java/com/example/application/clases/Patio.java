@@ -1,8 +1,11 @@
 package com.example.application.clases;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
+@Component
 public class Patio {
     private static Patio instance;
     private ArrayList<Auto> autosDisponibles = new ArrayList<>();

@@ -2,18 +2,23 @@ package com.example.application.clases;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmpleadoVentas extends Empleado {
     private int IDInstitucional;
     private double sueldo;
     private ArrayList<Auto> autosVendidos = new ArrayList<>();
+
+    public EmpleadoVentas() {
+        // Constructor por defecto necesario para que Spring pueda crear instancias de esta clase
+    }
 
     public EmpleadoVentas(String nombre, int cedula, int edad, String correo, int IDInstitucional, double sueldo) {
         super(nombre, cedula, edad, correo);
         this.setIDInstitucional(IDInstitucional);
         this.sueldo = sueldo;
     }
-
 
     public void menuEmpleadoVentas(Patio concesionario) {
         Scanner scanner = new Scanner(System.in);
@@ -47,7 +52,7 @@ public class EmpleadoVentas extends Empleado {
         } while (opcionEmpleadoVentas != 3);
     }
 
-    private void venderAuto(Patio concesionario) {
+    public void venderAuto(Patio concesionario) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese la matrícula del auto que desea vender: ");
@@ -97,7 +102,8 @@ public class EmpleadoVentas extends Empleado {
             System.out.println("Monto total vendido: $" + montoTotal);
         }
     }
-    private Cliente buscarClientePorCedula(int cedula, ArrayList<Cliente> clientes) {
+
+    public Cliente buscarClientePorCedula(int cedula, ArrayList<Cliente> clientes) {
         for (Cliente cliente : clientes) {
             if (cliente.getCedula() == cedula) {
                 return cliente;
@@ -106,7 +112,7 @@ public class EmpleadoVentas extends Empleado {
         return null;
     }
 
-    private Auto buscarAuto(String matricula, Patio concesionario) {
+    public Auto buscarAuto(String matricula, Patio concesionario) {
         for (Auto auto : concesionario.obtenerAutosDisponibles()) {
             if (auto.getMatricula().equals(matricula)) {
                 return auto;
@@ -116,5 +122,6 @@ public class EmpleadoVentas extends Empleado {
     }
 
     public void agregarAutoVendido(Auto autoVendido) {
+        autosVendidos.add(autoVendido);
     }
 }

@@ -1,11 +1,17 @@
 package com.example.application.clases;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Empleado {
     String nombre;
     int cedula;
     int edad;
     String correo;
     private int IDInstitucional;
+
+    public Empleado() {
+        // Constructor por defecto necesario para que Spring pueda crear instancias de esta clase
+    }
 
     public Empleado(String nombre, int cedula, int edad, String correo) {
         this.nombre = nombre;
