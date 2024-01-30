@@ -24,5 +24,6 @@ public class MisionView extends VerticalLayout {
         add(paragraph);
 
         setSizeFull();
+
     }
 }
