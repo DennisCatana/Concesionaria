@@ -41,7 +41,7 @@ public class RegistrarEmpleadoView extends VerticalLayout {
             Patio.getInstance().agregarEmpleado(nuevoEmpleado);
 
             // Muestra notificación de éxito
-            Notification.show("Empleado registrado con éxito").setPosition(Notification.Position.MIDDLE);
+            Notification.show("Empleado registrado con éxito");
         });
         FormLayout formLayout = new FormLayout(nombreField, cedulaField, edadField, correoField, idInstitucionalField, sueldoField, registrarBtn);
         add(formLayout, registrarBtn);
