@@ -23,7 +23,7 @@ public class SubMenuView extends VerticalLayout {
         });
 
         Button volverMenuPrincipalBtn = new Button("Volver al Menú Principal", e -> {
-            UI.getCurrent().navigate("hello");
+            UI.getCurrent().navigate("acceso-empleados");
         });
 
         add(venderAutosBtn, observarMenuPrincipalBtn,volverMenuPrincipalBtn);

@@ -14,6 +14,7 @@ public class Auto {
         this.modelo = modelo;
         this.marca = marca;
         this.precio = precio;
+        this.enVenta = false;
     }
 
     public String getMatricula() {
@@ -46,5 +47,13 @@ public class Auto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+    private boolean enVenta;
+    public boolean isEnVenta() {
+        return enVenta;
+    }
+
+    public void setEnVenta(boolean enVenta) {
+        this.enVenta = enVenta;
     }
 }
