@@ -12,6 +12,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.textfield.TextField;
 
+
 @PageTitle("Registrar Empleados de Ventas")
 @Route(value = "registrar-empleados-ventas", layout = MainLayout.class)
 public class RegistrarEmpleadoView extends VerticalLayout {
