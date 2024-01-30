@@ -24,20 +24,29 @@ public class AccesoEmpleadoView extends VerticalLayout {
 
         Button loginBtn = new Button("Iniciar Sesión", e -> {
             String nombre = nombreField.getValue();
-            int idInstitucional = Integer.parseInt(idInstitucionalField.getValue());
+            String idInstitucionalValue = idInstitucionalField.getValue();
 
-            Empleado empleado = Patio.getInstance().validarCredencialesEmpleado(nombre, idInstitucional);
+            try {
+                int idInstitucional = Integer.parseInt(idInstitucionalValue);
 
-            if (empleado != null) {
-                Notification.show("Bienvenido, " + nombre );
-                UI.getCurrent().navigate("menu-empleados");
-            } else {
-                Notification.show("Credenciales incorrectas");
+                // Agrega mensajes de depuración
+                System.out.println("Intento de inicio de sesión - Nombre: " + nombre + ", ID Institucional: " + idInstitucional);
+
+                Empleado empleado = Patio.getInstance().validarCredencialesEmpleado(nombre, idInstitucional);
+
+                if (empleado != null) {
+                    Notification.show("Bienvenido, " + nombre ).setPosition(Notification.Position.MIDDLE);
+                    UI.getCurrent().navigate("menu-empleados");
+                } else {
+                    Notification.show("Credenciales incorrectas").setPosition(Notification.Position.MIDDLE);
+                }
+            } catch (NumberFormatException ex) {
+                Notification.show("Error: ID Institucional no válido").setPosition(Notification.Position.MIDDLE);
+                System.err.println("Error al convertir ID Institucional a entero: " + idInstitucionalValue);
             }
         });
 
-        FormLayout formLayout = new FormLayout(nombreField, idInstitucionalField, loginBtn);
-        add(formLayout, loginBtn);
-        setAlignItems(Alignment.CENTER);
+
+        add(new FormLayout(nombreField, idInstitucionalField, loginBtn));
     }
 }

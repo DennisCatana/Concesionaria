@@ -42,6 +42,8 @@ public class RegistrarEmpleadoView extends VerticalLayout {
 
             // Muestra notificación de éxito
             Notification.show("Empleado registrado con éxito").setPosition(Notification.Position.MIDDLE);
+
+            System.out.println("Registro de usuario - Nombre: " + nuevoEmpleado.getNombre() + ", ID Institucional: " + nuevoEmpleado.getIDInstitucional());
         });
         FormLayout formLayout = new FormLayout(nombreField, cedulaField, edadField, correoField, idInstitucionalField, sueldoField, registrarBtn);
         add(formLayout, registrarBtn);

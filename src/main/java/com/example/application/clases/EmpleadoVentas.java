@@ -10,9 +10,10 @@ public class EmpleadoVentas extends Empleado {
 
     public EmpleadoVentas(String nombre, int cedula, int edad, String correo, int IDInstitucional, double sueldo) {
         super(nombre, cedula, edad, correo);
-        this.IDInstitucional = IDInstitucional;
+        this.setIDInstitucional(IDInstitucional);
         this.sueldo = sueldo;
     }
+
 
     public void menuEmpleadoVentas(Patio concesionario) {
         Scanner scanner = new Scanner(System.in);

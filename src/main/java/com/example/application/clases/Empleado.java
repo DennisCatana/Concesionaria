@@ -14,10 +14,6 @@ public class Empleado {
         this.correo = correo;
     }
 
-    public Empleado() {
-
-    }
-
     public String getNombre() {
         return nombre;
     }
