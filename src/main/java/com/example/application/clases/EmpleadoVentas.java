@@ -96,7 +96,6 @@ public class EmpleadoVentas extends Empleado {
             System.out.println("Monto total vendido: $" + montoTotal);
         }
     }
-
     private Cliente buscarClientePorCedula(int cedula, ArrayList<Cliente> clientes) {
         for (Cliente cliente : clientes) {
             if (cliente.getCedula() == cedula) {
@@ -113,5 +112,8 @@ public class EmpleadoVentas extends Empleado {
             }
         }
         return null;
+    }
+
+    public void agregarAutoVendido(Auto autoVendido) {
     }
 }

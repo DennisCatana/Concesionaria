@@ -13,14 +13,20 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Vender Autos")
 @Route(value = "vender-autos", layout = MainLayout.class)
+
+
 public class VenderAutos extends VerticalLayout {
+    private EmpleadoVentas empleadoVentas;
 
-    private final EmpleadoVentas empleadoVentas;
-
-    public VenderAutos(EmpleadoVentas empleadoVentas) {
+    private VenderAutos(EmpleadoVentas empleadoVentas) {
         this.empleadoVentas = empleadoVentas;
         initView();
     }
+
+    public static VenderAutos createVenderAutos(EmpleadoVentas empleadoVentas) {
+        return new VenderAutos(empleadoVentas);
+    }
+
     private void initView() {
         // Lógica para la vista de la página de venta de autos
         // ...

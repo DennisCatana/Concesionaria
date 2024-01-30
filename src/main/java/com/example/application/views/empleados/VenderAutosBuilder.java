@@ -11,6 +11,7 @@ public class VenderAutosBuilder {
     }
 
     public VenderAutos createVenderAutos() {
-        return new VenderAutos(empleadoVentas);
+        // Asegúrate de que la clase VenderAutos tenga el método createVenderAutos definido
+        return VenderAutos.createVenderAutos(empleadoVentas);
     }
 }
